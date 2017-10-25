@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title align="center">
+      Add prescription
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- Medicine header -->
+  <ion-row class="custom-margin-top custom-padding-left custom-padding-right">
+    <ion-col class="no-padding">
+      <p class="form-section-title">Medicine</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <hr class="hr-form">
+  </ion-row>
+  <!-- Medicine form -->
+  <ion-row class="custom-margin-top custom-padding-left custom-padding-right">
+    <ion-list class="custom-form-list custom-padding-left custom-padding-right">
+      <!-- Medicine's name -->
+      <ion-item class="no-padding">
+        <ion-label stacked class="custom-form-label">Name</ion-label>
+        <ion-input type="text" placeholder="Enter the medicine's name"></ion-input>
+      </ion-item>
+      <!-- Medicine's active substance -->
+      <ion-item class="no-padding">
+        <ion-label stacked class="custom-form-label">Active substance</ion-label>
+        <ion-input type="text" placeholder="Enter the medicine's  active substance"></ion-input>
+      </ion-item>
+
+      <!-- Medicine's dose -->
+      <ion-item class="no-padding">
+        <ion-label stacked class="custom-form-label">Dose</ion-label>
+        <ion-input type="text" placeholder="Enter the medicine's dose"></ion-input>
+      </ion-item>
+
+      <!-- Medicine's units -->
+      <ion-item class="no-padding">
+        <ion-label stacked class="custom-form-label">Units</ion-label>
+        <ion-input type="text" placeholder="Enter the medicine's units"></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-row>
+
+
+  <!-- Treatment header-->
+  <ion-row class="custom-margin-top custom-padding-left custom-padding-right">
+    <ion-col class="no-padding">
+      <p class="form-section-title">Treatment</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <hr class="hr-form">
+  </ion-row>
+  <!-- Treatment form -->
+  <ion-row class="custom-margin-top custom-padding-left custom-padding-right">
+    <ion-list class="custom-form-list custom-padding-left custom-padding-right">
+      <!-- Treatment's name -->
+      <ion-item class="no-padding">
+        <ion-label stacked class="custom-form-label">Time</ion-label>
+        <ion-input type="text" placeholder="Enter the treatment's time"></ion-input>
+      </ion-item>
+
+    </ion-list>
+  </ion-row>
+
+</ion-content>
+
+<ion-footer no-border>
+  <button ion-button class="submit-button" full round>Create</button>
+</ion-footer>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,8BAAU;EACR,WAAW,EAAE,KAAK;AAEpB,iCAAa;EACX,OAAO,EAAE,IAAI",
+"sources": ["add-prescription.component.scss"],
+"names": [],
+"file": "add-prescription.component.css"
+}

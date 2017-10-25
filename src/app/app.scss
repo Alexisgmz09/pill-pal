@@ -31,7 +31,7 @@
 
   span {
     position: absolute;
-    left: 0px;
+    left: 0;
     top: 50%;
     height: 100%;
     width: 100%;
@@ -43,4 +43,80 @@
 
 .blue-style {
   background-color: #488aff;
+}
+
+.form-section-title {
+  font-size: 1.2em;
+  font-family: "Roboto", Roboto, serif;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.hr-form {
+  border-top: 1px solid #488aff;
+  width: 100%;
+  margin: 0 16px 0 16px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+/* Forms */
+
+.submit-button {
+  background-color: #488aff;
+  width: calc(100% - 32px);
+  margin: 0 0 16px 16px;
+}
+
+.custom-form-label {
+  color: #488aff !important;
+}
+
+.custom-form-list {
+  width: 100%;
+  margin: 0;
+}
+
+/* Custom padding and margin values */
+.custom-padding  {
+  padding: 16px;
+}
+
+.custom-padding-top {
+  padding-top: 16px;
+}
+
+.custom-padding-bottom {
+  padding-bottom: 16px;
+}
+
+.custom-padding-left {
+  padding-left: 16px;
+}
+
+.custom-padding-right {
+  padding-right: 16px;
+}
+
+.custom-margin  {
+  padding: 16px;
+}
+
+.custom-margin-top {
+  margin-top: 16px;
+}
+
+.custom-margin-bottom {
+  margin-bottom: 16px;
+}
+
+.custom-margin-left {
+  margin-left: 16px;
+}
+
+.custom-margin-right {
+  margin-right: 16px;
 }

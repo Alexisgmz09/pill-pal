@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { Prescription } from '../../models/prescription.model';
 import { PrescriptionsService } from '../../services/prescriptions.service';
 import { OnInit } from '@angular/core';
+import { AddPrescriptionComponent } from './add-prescription/add-prescription.component';
 
 @Component({
   selector: 'page-prescriptions',
@@ -24,6 +25,12 @@ export class PrescriptionsPage implements OnInit {
   getPrescriptions (): void {
     this.prescriptionsService.getPrescriptions().then(prescriptions =>
       this.prescriptions = prescriptions );
+  }
+
+  onAddPrescriptionClicked(): void {
+    this.navCtrl.push(AddPrescriptionComponent, {
+
+    });
   }
 
 }
