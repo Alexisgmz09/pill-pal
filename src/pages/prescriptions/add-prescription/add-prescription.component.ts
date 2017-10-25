@@ -18,4 +18,8 @@ export class AddPrescriptionComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  save(model: Prescription): void {
+    console.log(model);
+  }
 }
