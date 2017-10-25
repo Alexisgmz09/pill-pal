@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyApp } from './app.component';
 
 import { PrescriptionsPage } from '../pages/prescriptions/prescriptions';
@@ -28,7 +29,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     BrowserModule,
     IonicModule.forRoot(MyApp, {
       tabsHideOnSubPages: true
-    })
+    }),
+    FormsModule,
+    ReactiveFormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
