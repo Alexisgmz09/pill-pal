@@ -1,11 +1,11 @@
 page-prescriptions {
-  p{
-    padding:{
-      left:5%;
-      bottom:5%;
-    };
+  p {
+    padding: {
+      left: 5%;
+      bottom: 5%;
+    }
   }
-  .radiuscard{
+  .radiuscard {
     @extend ion-card;
     @include border-radius(20px);
   }

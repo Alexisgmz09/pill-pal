@@ -14,3 +14,33 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.floating-button {
+  position: absolute;
+  right: 2vw;
+  bottom: 2vw ;
+  z-index: 9999;
+
+  border-radius: 999em;
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  line-height: 1;
+  font-size: 36px;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: -30%;
+    color: #FFF;
+  }
+}
+
+.blue-style {
+  background-color: #488aff;
+}
