@@ -10,6 +10,6 @@ page-today {
   }
   .noborder{
     @extend ion-card;
-    @include border-radius(4%);
+    @include border-radius(25px);
   }
 }

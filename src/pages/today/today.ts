@@ -1,7 +1,9 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PrescriptionsService } from '../../services/prescriptions.service';
 import { Prescription } from '../../models/prescription.model';
+import { Chart } from 'chart.js';
+
 
 @Component({
   selector: 'page-today',
@@ -9,6 +11,9 @@ import { Prescription } from '../../models/prescription.model';
   providers:[PrescriptionsService]
 })
 export class TodayPage implements OnInit {
+
+  @ViewChild('percentajeCanvas') presCanvas;
+  presChart: any;
   prescriptions: Prescription[];
 
   constructor(public navCtrl: NavController, private prescriptionService: PrescriptionsService) {
@@ -16,6 +21,21 @@ export class TodayPage implements OnInit {
   }
   ngOnInit(): void{
     this.getCurrentPrescriptions();
+    this.presChart = new Chart(this.presCanvas.nativeElement,{
+      type: 'pie',
+      data: {
+        datasets: [{
+            data: [97,3],
+            label: 'Treatment Percentaje'
+        }],
+    
+        // These labels appear in the legend and in the tooltips when hovering different arcs
+        labels: [
+            'Completed',
+            'Missed'
+        ]
+      }
+    });
   }
   getCurrentPrescriptions(): void{
     this.prescriptionService.getCurrentPrescriptions().then(prescriptions => 
