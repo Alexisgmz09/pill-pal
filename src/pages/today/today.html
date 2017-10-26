@@ -7,15 +7,14 @@
 <ion-content padding>
   <ion-card class="noborder">
     <ion-card-header>Graphs</ion-card-header>
+    <hr class="hr-form">
     <br/><br/><br/><br/><br/><br/><br/><br/><br/>
   </ion-card>
   <ion-card>
-    <p>Today you should keep up with the following treatment</p>
+    <ion-card-header>Your Treatment for Today</ion-card-header>
+    <hr class="hr-form">
     <ion-list >
-      <ion-item> Lozartan 50 mg: <p>9:00 am, 9:00 pm</p></ion-item>
-      <ion-item> Ibuprofeno 200 mg: <p>7:00 am, 1:00 pm, 10:00 pm</p> </ion-item>
-      <ion-item> Paracetamol 30 mg:<p> 8:00 pm, 8:00 pm</p></ion-item>
-      <ion-item> Omeprazol 600 mg: <p>2:00 pm</p></ion-item>
+      <ion-item *ngFor="let pres of prescriptions"> {{pres.medicine.name}} {{pres.medicine.dose}}<p class="no-padding">{{pres.frequencyTxt}}</p></ion-item>
     </ion-list>
   </ion-card>
 
