@@ -26,7 +26,11 @@ export class TodayPage implements OnInit {
       data: {
         datasets: [{
             data: [97,3],
-            label: 'Treatment Percentaje'
+            label: 'Treatment Percentaje',
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+            ]
         }],
     
         // These labels appear in the legend and in the tooltips when hovering different arcs
