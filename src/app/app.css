@@ -44,12 +44,21 @@
   width: calc(100% - 32px);
   margin: 0 0 16px 16px; }
 
+.bottom-button {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: inherit; }
+
 .custom-form-label {
   color: #488aff !important; }
 
 .custom-form-list {
   width: 100%;
   margin: 0; }
+
+.custom-input-line {
+  border-bottom: 1px solid #488aff; }
 
 /* Custom padding and margin values */
 .custom-padding {

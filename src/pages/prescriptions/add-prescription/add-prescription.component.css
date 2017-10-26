@@ -2,5 +2,23 @@ app-add-prescription ion-title {
   margin-left: -45px; }
 app-add-prescription .back-button {
   z-index: 9999; }
+app-add-prescription .custom-form-row {
+  padding: 0 32px 0 32px;
+  width: 100%; }
+app-add-prescription .custom-form-footer {
+  position: fixed;
+  width: 100%;
+  bottom: -5px; }
+app-add-prescription .custom-form-row-item {
+  width: 100%; }
+app-add-prescription .no-margin {
+  margin: 0 !important; }
+app-add-prescription .remove-span {
+  margin-top: 5px;
+  float: right;
+  color: #488aff; }
+  app-add-prescription .remove-span span {
+    margin-left: 5px;
+    cursor: pointer; }
 
 /*# sourceMappingURL=add-prescription.component.css.map */
