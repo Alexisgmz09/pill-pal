@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Prescription} from '../models/prescription.model';
-import { PrescriptionMedicine } from '../models/prescription-medicine.model';
 import { presArray, currentPresArray } from '../assets/mocks/prescription.mock';
 
 @Injectable()
