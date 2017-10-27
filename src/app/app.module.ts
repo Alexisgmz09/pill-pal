@@ -14,6 +14,7 @@ import { AddPrescriptionComponent } from '../pages/prescriptions/add-prescriptio
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {PrescriptionsService} from '../services/prescriptions.service';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    PrescriptionsService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

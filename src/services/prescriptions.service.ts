@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Prescription} from '../models/prescription.model';
-import { PrescriptionMedicine } from '../models/prescription-medicine.model';
 import { presArray, currentPresArray } from '../assets/mocks/prescription.mock';
 
 @Injectable()
@@ -20,5 +19,12 @@ export class PrescriptionsService {
       this.currentPrescriptions = currentPresArray;
     }
     return Promise.resolve(this.currentPrescriptions);
+  }
+
+  savePrescription(prescription: Prescription): Promise<boolean> {
+    return new Promise( (resolve, reject) => {
+      this.prescriptionsArray.push(prescription);
+      resolve(true);
+    });
   }
 }

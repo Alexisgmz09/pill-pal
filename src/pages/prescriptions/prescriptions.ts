@@ -7,8 +7,7 @@ import { AddPrescriptionComponent } from './add-prescription/add-prescription.co
 
 @Component({
   selector: 'page-prescriptions',
-  templateUrl: 'prescriptions.html',
-  providers: [PrescriptionsService]
+  templateUrl: 'prescriptions.html'
 })
 export class PrescriptionsPage implements OnInit {
 
