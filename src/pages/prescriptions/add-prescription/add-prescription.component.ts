@@ -8,14 +8,13 @@ import {OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-add-prescription',
-  templateUrl: 'add-prescription.component.html',
-  providers: [PrescriptionsService]
+  templateUrl: 'add-prescription.component.html'
 })
 export class AddPrescriptionComponent implements OnInit {
   public prescriptionForm: FormGroup; // form model
   prescription: Prescription;
 
-  constructor(public navCtrl: NavController, private _fb: FormBuilder) {
+  constructor(public navCtrl: NavController, private _fb: FormBuilder, private prescriptionsService: PrescriptionsService) {
   }
 
   ngOnInit(): void {
@@ -58,5 +57,11 @@ export class AddPrescriptionComponent implements OnInit {
       }),
       '',
       parseInt(model.controls.duration.value));
+
+    this.prescriptionsService.savePrescription(this.prescription).then(success => {
+      if(success) {
+        this.navCtrl.pop();
+      }
+    });
   }
 }

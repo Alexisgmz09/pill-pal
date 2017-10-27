@@ -20,4 +20,11 @@ export class PrescriptionsService {
     }
     return Promise.resolve(this.currentPrescriptions);
   }
+
+  savePrescription(prescription: Prescription): Promise<boolean> {
+    return new Promise( (resolve, reject) => {
+      this.prescriptionsArray.push(prescription);
+      resolve(true);
+    });
+  }
 }
