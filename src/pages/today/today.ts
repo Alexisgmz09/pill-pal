@@ -3,12 +3,13 @@ import { NavController } from 'ionic-angular';
 import { PrescriptionsService } from '../../services/prescriptions.service';
 import { Prescription } from '../../models/prescription.model';
 import { Chart } from 'chart.js';
+import { StoreService } from '../../services/store.service';
 
 
 @Component({
   selector: 'page-today',
   templateUrl: 'today.html',
-  providers:[PrescriptionsService]
+  providers:[PrescriptionsService, StoreService]
 })
 export class TodayPage implements OnInit {
 
