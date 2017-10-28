@@ -4,7 +4,7 @@
             Shopping Cart <ion-icon name="cart"></ion-icon>
         </ion-title>
     </ion-navbar>
-</ion-header>      
+</ion-header>
 <ion-content>
     <ion-row class="custom-margin-top custom-padding-left custom-padding-right">
     <ion-col class="no-padding">
@@ -26,14 +26,23 @@
         <p class="form-section-title">Where to?</p>
     </ion-col>
     </ion-row>
-    <ion-row>
-    <ion-col>
-        <div #map id="map"></div>
-    </ion-col>
+    <ion-row class="full-remaining-height-row custom-padding-left custom-padding-right">
+      <p *ngIf="!mapLoaded">Loading map...</p>
+      <div #map id="map"></div>
     </ion-row>
 </ion-content>
 
+<ion-footer no-border>
+  <div class="custom-form-footer">
+    <button
+      ion-button
+      class="submit-button"
+      full round>
+      Buy
+    </button>
+  </div>
+</ion-footer>
 
-      
-      
-      
+
+
+

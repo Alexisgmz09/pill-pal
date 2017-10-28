@@ -5,5 +5,14 @@ app-cart{
     }
     #map{
         height: 300px;
+        width: 100%;
+    }
+
+    .full-remaining-height-row {
+      bottom: 0;
+    }
+
+    ion-footer {
+      background-color: transparent;
     }
 }

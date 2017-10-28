@@ -1,0 +1,12 @@
+app-cart .align-right {
+  position: absolute;
+  right: 20px; }
+app-cart #map {
+  height: 300px;
+  width: 100%; }
+app-cart .full-remaining-height-row {
+  bottom: 0; }
+app-cart ion-footer {
+  background-color: transparent; }
+
+/*# sourceMappingURL=cart.css.map */

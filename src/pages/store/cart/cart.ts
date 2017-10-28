@@ -12,6 +12,8 @@ declare var google;
   templateUrl: 'cart.html'
 })
 export class CartComponent implements OnInit {
+  mapLoaded: boolean = false;
+
   @ViewChild('map') mapElement: ElementRef;
   map:any;
   cart: StoreMedicine[];
@@ -24,7 +26,7 @@ export class CartComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getCart();
-    
+
   }
   getCart(): void{
     this.storeService.getCart().then(cart => {
@@ -39,8 +41,9 @@ export class CartComponent implements OnInit {
             center: latlng,
             zoom: 15,
             mapTypeId: google.maps.MapTypeId.ROADMAP
-          }
+          };
         this.map = new google.maps.Map(this.mapElement.nativeElement,mapOptions);
+        this.mapLoaded = true;
         let marker = new google.maps.Marker({
             map: this.map,
             animation: google.maps.Animation.DROP,
@@ -49,6 +52,6 @@ export class CartComponent implements OnInit {
       },(err)=>{
           console.log(err);
       });
-      
+
   }
 }
