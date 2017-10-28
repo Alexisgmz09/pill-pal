@@ -16,8 +16,11 @@ import { CartComponent } from '../pages/store/cart/cart';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Geolocation } from '@ionic-native/geolocation';
 import {PrescriptionsService} from '../services/prescriptions.service';
 import { StoreService } from '../services/store.service';
+import { LocationService } from '../services/location.service';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -52,6 +55,7 @@ import { StoreService } from '../services/store.service';
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     PrescriptionsService,
     StoreService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
