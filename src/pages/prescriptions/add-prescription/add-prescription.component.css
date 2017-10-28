@@ -20,5 +20,7 @@ app-add-prescription .remove-span {
   app-add-prescription .remove-span span {
     margin-left: 5px;
     cursor: pointer; }
+app-add-prescription #last-form-element {
+  margin-bottom: 52px; }
 
 /*# sourceMappingURL=add-prescription.component.css.map */
