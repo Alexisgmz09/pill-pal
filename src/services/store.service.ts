@@ -9,9 +9,24 @@ export class StoreService {
 
     getMedicines():Promise<StoreMedicine[]>{
         return new Promise((resolve,reject) =>{
-            console.log(this.http.get('../assets/mocks/store.products.mock.json').subscribe())
-            
-            resolve([]);
+            this.http.get(
+                '../assets/mocks/store.products.mock.json')
+                .subscribe(
+                res => {
+                const products = res.json();
+                const medicinesResults: StoreMedicine[] = [];
+                products.products.forEach(product => {
+                    medicinesResults.push(
+                    new StoreMedicine(product.id,
+                        product.name,
+                        product.active_substance,
+                        product.dose,
+                        product.price));
+                });
+            resolve(medicinesResults);
+            },msg => {
+                reject(msg);
+            });
         });
     }
 }

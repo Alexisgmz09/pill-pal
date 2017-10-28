@@ -1,7 +1,11 @@
 <ion-header>
   <ion-navbar>
-    <ion-title align="center">
+    <ion-title >
       Store
+      <div class="cart-badge">
+        <ion-icon name="cart" item-end col-offset-10></ion-icon>
+        <ion-badge color="secondary">{{cart.length}}</ion-badge>
+      </div>
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,28 +13,10 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <ion-card class="radiuscard">
+      <ion-card class="radiuscard" *ngFor="let p of products">
         <ion-item>
-          <ion-icon name="cart" item-end large></ion-icon>
-         <ion-card-header>Lozartan 50 mg</ion-card-header> <p>$505</p>
-        </ion-item>
-      </ion-card>
-      <ion-card class="radiuscard">
-        <ion-item>
-          <ion-icon name="cart" item-end large></ion-icon>
-          <ion-card-header>Ibuprofeno 200 mg</ion-card-header> <p>$300</p>
-        </ion-item>
-      </ion-card>
-      <ion-card class="radiuscard">
-        <ion-item>
-          <ion-icon name="cart" item-end large></ion-icon>
-          <ion-card-header>Paracetamol 30 mg</ion-card-header><p>$250</p>
-        </ion-item>
-      </ion-card>
-      <ion-card class="radiuscard">
-        <ion-item>
-          <ion-icon name="cart" item-end large></ion-icon>
-          <ion-card-header>Omeprazol 600 mg</ion-card-header> <p>$230</p>
+          <ion-icon name="cart" item-end large class="green-checkmark" (click)="addToCart(p)"></ion-icon>
+         <ion-card-header>{{p.name}}</ion-card-header><ion-card-content>{{p.activeSubstance}} {{p.dose}}</ion-card-content> <p>$505</p>
         </ion-item>
       </ion-card>
     </ion-item>

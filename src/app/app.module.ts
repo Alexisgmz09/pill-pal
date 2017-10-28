@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 
 import { PrescriptionsPage } from '../pages/prescriptions/prescriptions';
@@ -15,6 +16,7 @@ import { AddPrescriptionComponent } from '../pages/prescriptions/add-prescriptio
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {PrescriptionsService} from '../services/prescriptions.service';
+import { StoreService } from '../services/store.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import {PrescriptionsService} from '../services/prescriptions.service';
       tabsHideOnSubPages: true
     }),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,6 +51,7 @@ import {PrescriptionsService} from '../services/prescriptions.service';
     StatusBar,
     SplashScreen,
     PrescriptionsService,
+    StoreService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

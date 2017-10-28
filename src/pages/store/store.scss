@@ -9,4 +9,9 @@ page-store {
     @extend ion-card;
     @include border-radius(20px);
   }
+  .cart-badge{
+    position: absolute;
+    right: 0;
+    bottom: 1px;
+  }
 }
