@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title align="center">
+            Shopping Cart <ion-icon name="cart"></ion-icon>
+        </ion-title>
+    </ion-navbar>
+</ion-header>      
+<ion-content>
+    <ion-row class="custom-margin-top custom-padding-left custom-padding-right">
+    <ion-col class="no-padding">
+        <p class="form-section-title">Products</p>
+    </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col>
+        <ion-list>
+            <ion-item *ngFor="let p of cart">
+                {{p.name}} ({{p.dose}}) <span class="align-right">${{p.price}}</span>
+            </ion-item>
+        </ion-list>
+        <ion-item>Total<span class="align-right">${{total}}</span></ion-item>
+    </ion-col>
+    </ion-row>
+</ion-content>
+
+
+      
+      
+      

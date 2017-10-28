@@ -4,7 +4,7 @@ import { StoreMedicine } from '../models/store.medicine.model';
 
 @Injectable()
 export class StoreService {
-
+    cart: StoreMedicine[];
     constructor(private http: Http){}
 
     getMedicines():Promise<StoreMedicine[]>{
@@ -28,5 +28,17 @@ export class StoreService {
                 reject(msg);
             });
         });
+    }
+    getCart(): Promise<StoreMedicine[]>{
+        return new Promise((resolve,reject)=>{
+            if(this.cart && this.cart.length>0){
+                resolve(this.cart);
+            }else{
+                reject("The shopping cart is empty");
+            }
+        });
+    }
+    addCart(cart:StoreMedicine[]):void{
+        this.cart = cart;
     }
 }

@@ -2,8 +2,8 @@
   <ion-navbar>
     <ion-title >
       Store
-      <div class="cart-badge">
-        <ion-icon name="cart" item-end col-offset-10></ion-icon>
+      <div class="cart-badge" (click)="goToCart()">
+        <ion-icon name="cart" item-end></ion-icon>
         <ion-badge color="secondary">{{cart.length}}</ion-badge>
       </div>
     </ion-title>

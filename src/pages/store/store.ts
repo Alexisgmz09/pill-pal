@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { StoreService } from '../../services/store.service';
 import { StoreMedicine } from '../../models/store.medicine.model';
+import { CartComponent } from './cart/cart';
 
 @Component({
   selector: 'page-store',
@@ -23,5 +24,11 @@ export class StorePage implements OnInit{
   }
   addToCart(medicine:StoreMedicine):void{
     this.cart.push(medicine);
+  }
+  goToCart():void{
+    if(this.cart && this.cart.length>0){
+      this.storeService.addCart(this.cart);
+      this.navCtrl.push(CartComponent,{});
+    }
   }
 }

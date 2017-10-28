@@ -12,12 +12,12 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { MorePage} from '../pages/more/more'
 
 import { AddPrescriptionComponent } from '../pages/prescriptions/add-prescription/add-prescription.component';
+import { CartComponent } from '../pages/store/cart/cart';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {PrescriptionsService} from '../services/prescriptions.service';
 import { StoreService } from '../services/store.service';
-
 @NgModule({
   declarations: [
     MyApp,
@@ -26,7 +26,8 @@ import { StoreService } from '../services/store.service';
     TodayPage,
     TabsPage,
     MorePage,
-    AddPrescriptionComponent
+    AddPrescriptionComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +46,8 @@ import { StoreService } from '../services/store.service';
     TodayPage,
     TabsPage,
     MorePage,
-    AddPrescriptionComponent
+    AddPrescriptionComponent,
+    CartComponent
   ],
   providers: [
     StatusBar,
