@@ -134,3 +134,31 @@
 .green-checkmark{
   color: rgba($color: #87C890, $alpha: 1.0)
 }
+ion-header{
+  color: #FAFAFA;
+  .toolbar-background{
+    background-color: rgba($color: #495c7c, $alpha: .8);
+  }
+  .toolbar-title{
+    color:#FAFAFA;
+  }
+}
+.fixed-content{
+  background-color: rgba($color: #495c7c, $alpha: .7);
+}
+.tabbar{
+  background-color: rgba($color: #495c7c, $alpha: .7);
+}
+.tabs-md .tab-button{
+  background-color: rgba($color: #495c7c, $alpha: .8);
+  color:#FAFAFA;
+}
+.tabs-md .tab-button[aria-selected="true"]{
+  color:rgb(6, 18, 182);
+}
+.item{
+  background-color: transparent;
+}
+.bar-button{
+  color: #FAFAFA;
+}

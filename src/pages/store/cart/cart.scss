@@ -1,4 +1,5 @@
 app-cart{
+    color: #FAFAFA  !important;
     .align-right{
         position: absolute;
         right: 20px;
@@ -11,8 +12,13 @@ app-cart{
     .full-remaining-height-row {
       bottom: 0;
     }
-
+    .item{
+        color:#FAFAFA;
+    }
+    .content{
+        color: #FAFAFA;
+    }
     ion-footer {
-      background-color: transparent;
+        background-color: rgba($color: #495c7c, $alpha: .7);
     }
 }
