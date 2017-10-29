@@ -51,10 +51,11 @@
   font-weight: bold;
   margin-top: 5px;
   margin-bottom: 5px;
+  color: #FAFAFA;
 }
 
 .hr-form {
-  border-top: 1px solid #488aff;
+  border-top: 1px solid #0612a6;
   width: 100%;
   margin: 0 16px 0 16px;
 }
@@ -79,7 +80,7 @@
 }
 
 .custom-form-label {
-  color: #488aff !important;
+  color: #0612a6 !important;
 }
 
 .custom-form-list {
@@ -154,11 +155,23 @@ ion-header{
   color:#FAFAFA;
 }
 .tabs-md .tab-button[aria-selected="true"]{
-  color:rgb(6, 18, 182);
+  color:#0612a6;
 }
 .item{
   background-color: transparent;
 }
 .bar-button{
+  color: #FAFAFA;
+}
+.text-input{
+  color: #FAFAFA;
+}
+.text-input::-moz-placeholder{
+  color: #FAFAFA;
+}
+.text-input::-webkit-input-placeholder{
+  color: #FAFAFA;
+}
+.text-input::-ms-input-placeholder{
   color: #FAFAFA;
 }
