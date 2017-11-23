@@ -9,7 +9,8 @@ import { PrescriptionsPage } from '../pages/prescriptions/prescriptions';
 import { StorePage } from '../pages/store/store';
 import { TodayPage } from '../pages/today/today';
 import { TabsPage } from '../pages/tabs/tabs';
-import { MorePage} from '../pages/more/more'
+import { MorePage} from '../pages/more/more';
+import { LoginPage } from '../pages/login/login';
 
 import { AddPrescriptionComponent } from '../pages/prescriptions/add-prescription/add-prescription.component';
 import { CartComponent } from '../pages/store/cart/cart';
@@ -21,6 +22,8 @@ import {PrescriptionsService} from '../services/prescriptions.service';
 import { StoreService } from '../services/store.service';
 import { LocationService } from '../services/location.service';
 
+import { Facebook } from '@ionic-native/facebook';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -30,7 +33,8 @@ import { LocationService } from '../services/location.service';
     TabsPage,
     MorePage,
     AddPrescriptionComponent,
-    CartComponent
+    CartComponent,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,8 @@ import { LocationService } from '../services/location.service';
     TabsPage,
     MorePage,
     AddPrescriptionComponent,
-    CartComponent
+    CartComponent,
+    LoginPage
   ],
   providers: [
     StatusBar,
@@ -58,7 +63,8 @@ import { LocationService } from '../services/location.service';
     Geolocation,
     PrescriptionsService,
     StoreService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Facebook
   ]
 })
 export class AppModule {}
