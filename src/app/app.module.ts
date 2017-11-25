@@ -21,8 +21,12 @@ import { Geolocation } from '@ionic-native/geolocation';
 import {PrescriptionsService} from '../services/prescriptions.service';
 import { StoreService } from '../services/store.service';
 import { LocationService } from '../services/location.service';
+import { LoginService } from '../services/login.service';
 
 import { Facebook } from '@ionic-native/facebook';
+import { IonicStorageModule } from '@ionic/storage';
+import { CardsPage } from '../pages/more/cards/cards';
+import { CardPage } from '../pages/more/cards/card/card';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,9 @@ import { Facebook } from '@ionic-native/facebook';
     MorePage,
     AddPrescriptionComponent,
     CartComponent,
-    LoginPage
+    LoginPage,
+    CardsPage,
+    CardPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,8 @@ import { Facebook } from '@ionic-native/facebook';
     }),
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,7 +62,9 @@ import { Facebook } from '@ionic-native/facebook';
     MorePage,
     AddPrescriptionComponent,
     CartComponent,
-    LoginPage
+    LoginPage,
+    CardsPage,
+    CardPage
   ],
   providers: [
     StatusBar,
@@ -63,6 +72,7 @@ import { Facebook } from '@ionic-native/facebook';
     Geolocation,
     PrescriptionsService,
     StoreService,
+    LoginService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Facebook
   ]

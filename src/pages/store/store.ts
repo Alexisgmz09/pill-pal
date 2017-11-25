@@ -3,19 +3,29 @@ import { NavController } from 'ionic-angular';
 import { StoreService } from '../../services/store.service';
 import { StoreMedicine } from '../../models/store.medicine.model';
 import { CartComponent } from './cart/cart';
+import { LoginService } from '../../services/login.service';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-store',
   templateUrl: 'store.html'
 })
 export class StorePage implements OnInit{
+  logged:boolean;
   products:StoreMedicine[];
   cart:StoreMedicine[]=[];
-  constructor(public navCtrl: NavController, private storeService: StoreService) {
+  constructor(public navCtrl: NavController, private storeService: StoreService,
+          private authService:LoginService) {
 
   }
   ngOnInit():void{
-    this.getMedicines();
+    this.authService.validateSession().then(res=>{
+      this.getMedicines();
+    }).catch(err=>{
+      console.log('Loginpage');
+      console.log(err);
+      this.navCtrl.push(LoginPage);
+    });    
   }
   getMedicines():void{
     this.storeService.getMedicines().then(
@@ -31,4 +41,5 @@ export class StorePage implements OnInit{
       this.navCtrl.push(CartComponent,{});
     }
   }
+  
 }

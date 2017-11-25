@@ -1,0 +1,99 @@
+<script type="text/javascript"
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript"
+src="https://openpay.s3.amazonaws.com/openpay.v1.min.js"></script>
+<script type='text/javascript'
+src="https://openpay.s3.amazonaws.com/openpay-data.v1.min.js"></script>
+
+<ion-header>
+        <ion-navbar>
+          <ion-title class="custom-padding-left">
+            Add Credit Card
+          </ion-title>
+        </ion-navbar>
+      </ion-header>
+      
+      
+      <ion-content>
+        <form [formGroup]="prescriptionForm" novalidate (ngSubmit)="save(prescriptionForm)">
+          <!-- Medicine header -->
+          <ion-row class="custom-margin-top custom-padding-left custom-padding-right">
+            <ion-col class="no-padding">
+              <p class="form-section-title">Card</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <hr class="hr-form">
+          </ion-row>
+          <!-- Medicine form -->
+          <ion-row class="custom-margin-top custom-padding-left custom-padding-right">
+            <ion-list class="custom-form-list custom-padding-left custom-padding-right">
+              <!-- Medicine's name -->
+              <ion-item class="no-padding">
+                <ion-label stacked class="custom-form-label">Name <span>*</span></ion-label>
+                <ion-input
+                  type="text"
+                  placeholder="Enter the card holder's name"
+                  formControlName="name">
+                </ion-input>
+              </ion-item>
+              <!-- Medicine's active substance -->
+              <ion-item class="no-padding">
+                <ion-label stacked class="custom-form-label">Number <span>*</span></ion-label>
+                <ion-input
+                  type="text"
+                  placeholder="Enter the card's number"
+                  formControlName="number">
+                </ion-input>
+              </ion-item>
+      
+              <!-- Medicine's dose -->
+              <ion-item class="no-padding">
+                <ion-label stacked class="custom-form-label">CVV2 <span>*</span></ion-label>
+                <ion-input
+                  type="text"
+                  placeholder="Enter the card's CVV"
+                  formControlName="cvv2">
+                </ion-input>
+              </ion-item>
+      
+              <!-- Medicine's units -->
+              <ion-item class="no-padding">
+                <ion-label stacked class="custom-form-label">Expiration Date <span>*</span></ion-label>
+                <ion-input
+                  type="text"
+                  size="2"
+                  placeholder="Enter the card's expiration month"
+                  formControlName="expiration_month">
+                </ion-input>
+              </ion-item>
+              <ion-item class="no-padding">
+                    <ion-label stacked class="custom-form-label"></ion-label>
+                    <ion-input
+                        type="text"
+                        size="2"
+                        placeholder="Enter the card's expiration year"
+                        formControlName="expiration_year">
+                    </ion-input>
+             </ion-item> 
+            </ion-list>
+          </ion-row>
+          <br>
+          <div class="custom-form-footer">
+            <button
+              id="submit-card"
+              ion-button
+              class="submit-button "
+              full round
+              type="submit"
+              [disabled]="!prescriptionForm.valid">
+              Create
+            </button>
+          </div>
+        </form>
+      </ion-content>
+      
+      
+      
+      
+      

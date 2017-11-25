@@ -27,7 +27,7 @@
         "@ionic-native/status-bar": "3.12.1",
         "@ionic/storage": "2.0.1",
         "chart.js": "^2.7.0",
-        "cordova-android": "^6.2.3",
+        "cordova-android": "^6.4.0",
         "cordova-ios": "^4.4.0",
         "cordova-plugin-compat": "^1.2.0",
         "cordova-plugin-console": "^1.0.5",
@@ -54,16 +54,16 @@
             "cordova-plugin-geolocation": {
                 "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
             },
-            "cordova-plugin-facebook4": {
-                "APP_ID": "884014418438926",
-                "APP_NAME": "PillPal"
-            },
             "cordova-plugin-console": {},
             "cordova-plugin-device": {},
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {}
+            "ionic-plugin-keyboard": {},
+            "cordova-plugin-facebook4": {
+                "APP_ID": "884014418438926",
+                "APP_NAME": "PillPal"
+            }
         },
         "platforms": [
             "android",
