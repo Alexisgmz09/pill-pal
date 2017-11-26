@@ -31,5 +31,9 @@ export class PrescriptionsPage implements OnInit {
 
     });
   }
-
+  deletePrescription(id:string): void {
+    this.prescriptionsService.deletePrescription(id).then(prescriptions =>{
+      this.prescriptions= prescriptions;
+    }).catch(err=>{console.log('PAfgesController catch');console.log(err);})
+  }
 }

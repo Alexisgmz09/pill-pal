@@ -20,8 +20,6 @@ export class StoreService {
                     .subscribe(
                     res => {
                     const products = res.json();
-                    console.log(res);
-                    console.log(products);
                     const medicinesResults: StoreMedicine[] = [];
                     products.medicines.forEach(product => {
                         medicinesResults.push(

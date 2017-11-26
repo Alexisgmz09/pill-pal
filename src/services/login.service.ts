@@ -6,7 +6,7 @@ import { Header } from 'ionic-angular/components/toolbar/toolbar-header';
 
 @Injectable()
 export class LoginService{
-    apiUrl:string = 'http://192.168.0.20:3000/';
+    apiUrl:string = 'http://192.168.100.5:3000/';
     constructor(private storage:Storage, private http:Http){}
     saveAuth(auth:string):void{
         console.log(auth);

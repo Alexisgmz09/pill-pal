@@ -10,9 +10,12 @@
   <ion-list>
    <ion-item>
      <ion-card class="radiuscard" *ngFor="let prescription of prescriptions">
+       <ion-item>
+       <ion-icon name="trash" item-end large class="green-checkmark" (click)="deletePrescription(prescription.id)" ></ion-icon>
        <ion-card-header>
          {{prescription.medicine.name}} {{prescription.medicine.dose}}
        </ion-card-header>
+       </ion-item>
        <p>
          <span *ngFor="let frequency of prescription.frequency; let i = index">{{("0" + (frequency.getHours())).slice(-2)}}:{{("0" + (frequency.getMinutes())).slice(-2)}}<span *ngIf="i < prescription.frequency.length - 1 ">,</span> </span>
        </p>

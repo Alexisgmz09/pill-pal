@@ -19,6 +19,7 @@ export class CardPage implements OnInit {
     OpenPay.setApiKey('pk_34b1d91350b64727a8440feabb6efd6e');
     OpenPay.setSandboxMode(true);
     this.deviceSessionId = OpenPay.deviceData.setup()
+    console.log(this.deviceSessionId);
     this.prescriptionForm = this._fb.group({
         name: ['', [Validators.required, Validators.minLength(1)]],
         number: ['', [Validators.required, Validators.minLength(1)]],
