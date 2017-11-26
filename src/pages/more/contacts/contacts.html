@@ -9,14 +9,11 @@
       <ion-content>
         <ion-list>
          <ion-item>
-           <ion-card class="radiuscard" *ngFor="let card of cards" >
+           <ion-card class="radiuscard" *ngFor="let contact of contacts" >
              <ion-item>
              <ion-card-header>
-                 ************{{card.last4}}
+                 {{contact}}
              </ion-card-header>
-             <p>
-               {{card.brand}} <span>{{card.expirationMonth}}/{{card.expirationYear}}</span>
-             </p>
              </ion-item>
            </ion-card>
          </ion-item>
@@ -24,7 +21,7 @@
       </ion-content>
       
       <ion-footer>
-        <div class="floating-button blue-style" (click)="onCardAdd()">
+        <div class="floating-button blue-style" (click)="onContactAdd()">
           <span>+</span>
         </div>
       </ion-footer>

@@ -11,6 +11,8 @@ import { TodayPage } from '../pages/today/today';
 import { TabsPage } from '../pages/tabs/tabs';
 import { MorePage} from '../pages/more/more';
 import { LoginPage } from '../pages/login/login';
+import { CardsPage } from '../pages/more/cards/cards';
+import { CardPage } from '../pages/more/cards/card/card';
 
 import { AddPrescriptionComponent } from '../pages/prescriptions/add-prescription/add-prescription.component';
 import { CartComponent } from '../pages/store/cart/cart';
@@ -22,11 +24,13 @@ import {PrescriptionsService} from '../services/prescriptions.service';
 import { StoreService } from '../services/store.service';
 import { LocationService } from '../services/location.service';
 import { LoginService } from '../services/login.service';
+import { CardsService } from '../services/cards.service';
 
 import { Facebook } from '@ionic-native/facebook';
 import { IonicStorageModule } from '@ionic/storage';
-import { CardsPage } from '../pages/more/cards/cards';
-import { CardPage } from '../pages/more/cards/card/card';
+import { ContactsPage } from '../pages/more/contacts/contacts';
+import { ContactPage } from '../pages/more/contacts/contact/contact';
+import { ContactsService } from '../services/contacts.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,9 @@ import { CardPage } from '../pages/more/cards/card/card';
     CartComponent,
     LoginPage,
     CardsPage,
-    CardPage
+    CardPage,
+    ContactsPage,
+    ContactPage
   ],
   imports: [
     BrowserModule,
@@ -64,7 +70,9 @@ import { CardPage } from '../pages/more/cards/card/card';
     CartComponent,
     LoginPage,
     CardsPage,
-    CardPage
+    CardPage,
+    ContactsPage,
+    ContactPage
   ],
   providers: [
     StatusBar,
@@ -74,7 +82,9 @@ import { CardPage } from '../pages/more/cards/card/card';
     StoreService,
     LoginService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Facebook
+    Facebook,
+    CardsService,
+    ContactsService
   ]
 })
 export class AppModule {}

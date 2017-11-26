@@ -1,0 +1,13 @@
+page-cards {
+    p {
+      padding: {
+        left: 5%;
+        bottom: 5%;
+      }
+    }
+    .radiuscard {
+      @extend ion-card;
+      @include border-radius(20px);
+    }
+  }
+  
