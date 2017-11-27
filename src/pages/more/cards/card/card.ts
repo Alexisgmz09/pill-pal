@@ -28,12 +28,10 @@ export class CardPage implements OnInit {
       expiration_month: ['', [Validators.required, Validators.minLength(1), Validators.pattern(/([0][1-9])|([1][0-2])/i)]],
       expiration_year: ['', [Validators.required, Validators.minLength(1), Validators.pattern(/[0-9]{2}/i)]]
     });
-    console.log(OpenPay);
     OpenPay.setId('m6l9ig4gbsmqaxftlujo');
     OpenPay.setApiKey('pk_34b1d91350b64727a8440feabb6efd6e');
     OpenPay.setSandboxMode(true);
-    this.deviceSessionId = OpenPay.deviceData.setup()
-    console.log(this.deviceSessionId);
+    this.deviceSessionId = OpenPay.deviceData.setup();
   }
   save(model:FormGroup):void{
     OpenPay.token.create({

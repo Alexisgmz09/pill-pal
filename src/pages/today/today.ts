@@ -33,7 +33,6 @@ export class TodayPage implements OnInit {
                 'rgba(255, 99, 132, 0.2)'
             ]
         }],
-    
         // These labels appear in the legend and in the tooltips when hovering different arcs
         labels: [
             'Completed',
@@ -43,7 +42,7 @@ export class TodayPage implements OnInit {
     });
   }
   getCurrentPrescriptions(): void{
-    this.prescriptionService.getCurrentPrescriptions().then(prescriptions => 
+    this.prescriptionService.getPrescriptions().then(prescriptions => 
       this.prescriptions = prescriptions).catch(msg => console.log(msg));
   }
 }

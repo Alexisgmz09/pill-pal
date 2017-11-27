@@ -1,18 +1,15 @@
 
 <ion-content padding>
 
-  <ion-card>
-    <ion-card-header> Pill Pal</ion-card-header>
+  <ion-card class="login">
+    <ion-card-header class="center header"> Pill Pal</ion-card-header>
     <ion-card-content>
-      <a class="submit-button" (click)="loginWithFB()">Login</a>
-    </ion-card-content>
-  </ion-card>
-  <ion-card *ngIf="userData">
-    <ion-card-header>{{ userData.username }}</ion-card-header>
-    <img [src]="userData.picture" />
-    <ion-card-content>
-      <p>Email: {{ userData.email }}</p>
-      <p>First Name: {{ userData.first_name }}</p>
+      <p class="center">
+        Welcome to Pill Pal!
+      </p>
+      <p>
+      </p>
+      <button ion-button full round class="submit-button login-button" (click)="loginWithFB()">Login</button>
     </ion-card-content>
   </ion-card>
    

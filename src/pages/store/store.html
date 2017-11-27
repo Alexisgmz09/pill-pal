@@ -16,7 +16,7 @@
       <ion-card class="radiuscard" *ngFor="let p of products">
         <ion-item>
           <ion-icon name="cart" item-end large class="green-checkmark" (click)="addToCart(p)"></ion-icon>
-         <ion-card-header>{{p.name}}</ion-card-header><ion-card-content>{{p.activeSubstance}} {{p.dose}}</ion-card-content> <p>$505</p>
+         <ion-card-header>{{p.name}}</ion-card-header><ion-card-content>{{p.activeSubstance}} {{p.dose}}</ion-card-content> <p>${{p.price}}</p>
         </ion-item>
       </ion-card>
     </ion-item>

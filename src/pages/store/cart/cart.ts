@@ -5,21 +5,30 @@ import {StoreService} from '../../../services/store.service';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { LocationService } from '../../../services/location.service';
 import { Geolocation} from '@ionic-native/geolocation';
+import { TabsPage } from '../../tabs/tabs';
 
+
+declare var jQuery:any;
+declare var OpenPay:any;
 declare var google;
+
 @Component({
   selector: 'app-cart',
   templateUrl: 'cart.html'
 })
 export class CartComponent implements OnInit {
   mapLoaded: boolean = false;
-
+  deviceSessionId:string;
   @ViewChild('map') mapElement: ElementRef;
   map:any;
   cart: StoreMedicine[];
   total: number =0.0;
 
   constructor(public navCtrl: NavController, private _fb: FormBuilder, private storeService: StoreService, private geolocation:Geolocation) {
+    OpenPay.setId('m6l9ig4gbsmqaxftlujo');
+    OpenPay.setApiKey('pk_34b1d91350b64727a8440feabb6efd6e');
+    OpenPay.setSandboxMode(true);
+    this.deviceSessionId = OpenPay.deviceData.setup();
   }
   ionViewDidLoad(){
     this.loadMap();
@@ -53,5 +62,12 @@ export class CartComponent implements OnInit {
           console.log(err);
       });
 
+  }
+  buy(){
+    this.storeService.buy(this.deviceSessionId).then(res=>{
+      this.navCtrl.setRoot(TabsPage);
+    }).catch(err=>{
+      console.log(err);
+    })
   }
 }
