@@ -11,6 +11,7 @@
          <ion-item>
            <ion-card class="radiuscard" *ngFor="let contact of contacts" >
              <ion-item>
+                <ion-icon name="trash" item-end large class="green-checkmark" (click)="deleteContact(contact)" ></ion-icon>
              <ion-card-header>
                  {{contact}}
              </ion-card-header>

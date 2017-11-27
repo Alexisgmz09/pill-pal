@@ -41,4 +41,22 @@ export class ContactsService {
             })
         });
     }
+    deleteContact(id:string): Promise<string[]>{
+        return new Promise((resolve,reject)=>{
+          this.auth.getAuth().then(auth=>{
+            let headers= new Headers();
+            headers.append('auth',auth);
+            this.http.delete(this.auth.apiUrl+'contacts/', new RequestOptions({headers:headers,body:{contact:id}}))
+            .subscribe(res=>{
+              console.log(res);
+              resolve(res.json().contacts);
+            },msg=>{
+              console.log(msg);
+              reject(msg);
+            })
+          }).catch(err=>{
+            reject(err);
+          })
+        });
+      }
 }

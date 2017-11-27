@@ -26,5 +26,10 @@ export class ContactsPage implements OnInit{
   onContactAdd():void{
       this.navCtrl.push(ContactPage);
   }
+  deleteContact(id:string): void {
+    this.contServ.deleteContact(id).then(contacts =>{
+      this.contacts= contacts;
+    }).catch(err=>{console.log(err);})
+  }
   
 }
